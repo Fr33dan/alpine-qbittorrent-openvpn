@@ -1,6 +1,6 @@
-ARG BASE_IMAGE="alpine:3.15"
+#ARG BASE_IMAGE="alpine:3.15"
 # uncomment below to enable qbittorrent search engine
-# ARG BASE_IMAGE="python:3-alpine3.15"
+ ARG BASE_IMAGE="python:3-alpine3.15"
 
 # hadolint ignore=DL3006
 FROM ${BASE_IMAGE}
@@ -29,7 +29,7 @@ RUN addgroup -S openvpn \
     -g openvpn \
     -G openvpn \
     openvpn \
-    && apk add --no-cache \
+    && apk add \
     bash \
     bind-tools \
     openvpn \
