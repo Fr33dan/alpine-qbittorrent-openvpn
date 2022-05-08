@@ -29,7 +29,7 @@ RUN addgroup -S openvpn \
     -g openvpn \
     -G openvpn \
     openvpn \
-	&& echo -e "http://nl.alpinelinux.org/alpine/v3.5/main\nhttp://nl.alpinelinux.org/alpine/v3.5/community" > /etc/apk/repositories \
+	&& echo -e "http://nl.alpinelinux.org/alpine/v3.15/main\nhttp://nl.alpinelinux.org/alpine/v3.15/community" > /etc/apk/repositories \
     && apk add --no-cache \
     bash \
     bind-tools \
