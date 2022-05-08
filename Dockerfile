@@ -29,8 +29,8 @@ RUN addgroup -S openvpn \
     -g openvpn \
     -G openvpn \
     openvpn \
-	&& apk update \
-    && apk add \
+	&& RUN echo -e "http://nl.alpinelinux.org/alpine/v3.5/main\nhttp://nl.alpinelinux.org/alpine/v3.5/community" > /etc/apk/repositories \
+    && apk add --no-cache \
     bash \
     bind-tools \
     openvpn \
@@ -40,7 +40,7 @@ RUN addgroup -S openvpn \
     sudo \
     subversion \
     jq \
-    && apk add s6-overlay \
+    && apk add --no-cache s6-overlay \
     && setcap cap_net_admin+ep "$(which openvpn)" \
     && apk del libcap --purge \
     && echo "openvpn ALL=(ALL)  NOPASSWD: /sbin/ip" >> /etc/sudoers \
