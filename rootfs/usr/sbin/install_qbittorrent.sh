@@ -4,7 +4,7 @@ ARCH="$(uname -m)"
 echo "building for ${ARCH}"
 
 QBITTORRENT_VERSION=4.4.5
-LIBTORRENT_VERSION=v2.0.7
+LIBTORRENT_VERSION=v2.0.8
 
 if [ "${ARCH}" = "x86_64" ]; then
     qbit_arch="x86_64"
