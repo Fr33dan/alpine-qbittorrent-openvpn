@@ -37,7 +37,7 @@ RUN addgroup -S openvpn \
         iptables \
         libcap \
         sudo \
-        subversion \
+        git \
         jq \
     && setcap cap_net_admin+ep "$(which openvpn)" \
     && apk del libcap --purge \
